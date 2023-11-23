@@ -2,10 +2,11 @@ import React from "react";
 
 import "./app.scss";
 import Navbar from "./components/navbar/Navbar";
+// import Test from "./components/navbar/Test";
 
 function App() {
   return (
-    <div>
+    <>
       <section>
         <Navbar />
       </section>
@@ -15,7 +16,8 @@ function App() {
       <section>Parallax</section>
       <section>Portfolio</section>
       <section>Contact us</section>
-    </div>
+      {/* <Test /> */}
+    </>
   );
 }
 
