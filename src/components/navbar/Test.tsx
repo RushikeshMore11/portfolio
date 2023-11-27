@@ -19,7 +19,7 @@ const Test = () => {
         variants={variant}
         animate={open ? "visible" : "hidden"}
         // drag
-        // transition={{ duration: 3, type: "tween" }}
+        transition={{ duration: 3, type: "tween", repeatType: "mirror" }}
         className="h-[200px] w-[200px] bg-white"
       ></motion.div>
       <button className="bg-black w-3" onClick={() => setOpen((prev) => !prev)}>

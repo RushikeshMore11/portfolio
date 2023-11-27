@@ -1,0 +1,47 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+export interface IToggleButtonProps {
+  setFun: () => void;
+}
+
+const ToggleButton = ({ setFun }: IToggleButtonProps) => {
+  const handleClick = () => {
+    setFun();
+  };
+  return (
+    <button onClick={handleClick}>
+      <svg width="23" height={"23"} viewBox="0 0 23 23">
+        <motion.path
+          strokeWidth="3"
+          stroke="black"
+          strokeLinecap="round"
+          variants={{
+            closed: { d: "M 2 2.5 L 20 2.5" },
+            open: { d: "M 16.5 L 17 2.5" },
+          }}
+        />
+        {/* <motion.path
+          strokeWidth="3"
+          stroke="black"
+          strokeLinecap="round"
+          variants={{
+            closed: { d: "M 2 2.5 L 20 2.5" },
+            open: { d: "M 16.5 L 17 2.5" },
+          }}
+        />
+        <motion.path
+          strokeWidth="3"
+          stroke="black"
+          strokeLinecap="round"
+          variants={{
+            closed: { d: "M 2 2.5 L 20 2.5" },
+            open: { d: "M 16.5 L 17 2.5" },
+          }}
+        /> */}
+      </svg>
+    </button>
+  );
+};
+
+export default ToggleButton;
